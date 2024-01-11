@@ -1,14 +1,20 @@
 # Seal Project 2
 
-- **Your Name:**
-- **App Name:**
+- **Eugenio Jimenez:**
+- **NFL Team Tracker:**
 - **Description:**
-- **Github URL:**
-- **Deployed Website:**
-- **Trello Board:**
+Bring users to a page where the can click through the teams of either the afc or nfc division of the nfl .they will be brought to a show page displaying an image of the team logo , the 2024 season record, and city /state of where that team plays.
+- **Github URL:https://github.com/geno223/project2**
+- **Deployed Website:https://ej-seal-project2.onrender.com/**
+- **Trello Board:https://trello.com/b/M5qKPqVY/nfl**
 
 ## List of Dependencies
-
+express
+ejs
+method override
+mongoose
+morgan
+bcrypt
 ##### Node Dependencies (package.json)
 
 - express
@@ -23,20 +29,35 @@ Below should be a table listing the different routes in your app and their purpo
 
 | Route Name | Endpoint | Method | Description |
 |------------|----------|--------|-------------|
-| Fruit Index | /fruits | GET | Renders all fruits on a page|
+
+|Team Index | /nfl| GET | Renders all NFL teams on a page|
+
+| Team Show | /nfl/teamId: | GET | brings you to page where you can view a team|
+
+| Team New | /nfl/teamId:/new | GET | brings you to page where you can add new team|
+
+| Team Edit | /nfl/teamId:/edit | GET | brings you to page where you can edit teams record|
+
+
+| Team Delete | /nfl/teamId:/ | GET | brings you to page where you can delete a team|
+
+| Tea Update  /nfl/teamId:/ | GET | brings you to page where you can update team|
+
+
+
 
 ## Design Mockups (Desktop + Mobile)
 
 ##### Mobile Design
 
-![Mobile Design Mockup](./url-to-picture.jpg)
+![Mobile Design Mockup](https://imgur.com/mAO8p95)
 
 ##### Desktop Design
 
-![Desktop Design Mockup](./url-to-picture.jpg)
+![Desktop Design Mockup](https://imgur.com/z2qfUEQ)
 
 ## ERD (Entity Relationship Diagram)
 
 This should be a diagram showing your models and any relationships between them.
 
-![Entity Relationship Diagram](./url-to-picture.jpg)
+![Entity Relationship Diagram](https://imgur.com/XCuVBrc)
