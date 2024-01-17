@@ -4,8 +4,9 @@ const express = require("express");
 const morgan = require("morgan");
 const methodOverride = require("method-override");
 const mongoose = require("mongoose");
+const team = require('./models/db.js'); 
+const nflTeams = require("./models/db.js");
 
-// get .env variables
 const { DATABASE_URL, SECRET, PORT } = process.env;
 
 // database connection
@@ -20,9 +21,42 @@ mongoose.connection
 const app = express();
 
 // routes
-app.get("/", (req, res) => {
-  res.send("It's Working");
-});
+
+//index
+app.get("/nfl", (req, res)=>{
+  res.send(nflTeams)
+})
+
+//new-get
+
+
+
+//destroy-delete
+
+
+
+//update-put
+
+
+
+
+//create-post
+
+
+
+
+//edit-get
+
+
+
+
+//show- get
+
+
+
+
+
+
 
 // turn on the server (the listener)
 app.listen(PORT, () => {
