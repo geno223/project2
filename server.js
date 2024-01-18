@@ -4,28 +4,32 @@ const express = require("express");
 const morgan = require("morgan");
 const methodOverride = require("method-override");
 const mongoose = require("mongoose");
-const team = require('./models/db.js'); 
-const nflTeams = require("./models/db.js");
+const TeamRouter = require("./controllers/team")
+
 
 const { DATABASE_URL, SECRET, PORT } = process.env;
-
-// database connection
-mongoose.connect(DATABASE_URL);
-
-mongoose.connection
-  .on("open", () => console.log("Connected to Mongoose"))
-  .on("close", () => console.log("Disconnected from Mongoose"))
-  .on("error", (error) => console.log(error));
 
 // create app object
 const app = express();
 
+
+//Middleware 
+
+//Middleware
+app.use(morgan('dev'))
+app.use(methodOverride('_method'))
+app.use(express.urlencoded({extended: true}))
+app.use('/static', express.static('public'))
+
 // routes
 
+app.use('/nfl', TeamRouter)
+
+
 //index
-app.get("/nfl", (req, res)=>{
-  res.send(nflTeams)
-})
+// app.get("/nfl", (req, res)=>{
+//   res.render("index.ejs")
+// })
 
 //new-get
 
