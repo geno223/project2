@@ -1,13 +1,30 @@
+<style>
+    body {
+    background-image: url("https://i.imgur.com/TAOkCxW.png");
+   
+  }
+  h1{
+    color: brown;
+  }
+  h2{
+    color: brown;
+  }
+  h3{
+    color: brown;
+  }
+  
+  </style>
 <body>
 
-    <h1>teams</h1>
+    <h1>Teams</h1>
       
     <% for(let i =0; i < teams.length; i++) {%>
-    <a href="/teams/<%= teams[i]._id%>">
+    <a href="/nfl/<%= teams[i]._id%>">
         <h2><%= teams[i].location %></h2></a>
-        
+        <h3><%= teams[i].team %></h3></a>
+       
     <div class="name-this">
-        <a href="/teams/<%= i %>" class="name-this"
+        <a href="/nfl/<%= i %>" class="name-this"
           ><img src="<%= teams[i].image %>" class="name-this"
         />
       </a>

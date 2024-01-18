@@ -5,7 +5,7 @@ const morgan = require("morgan");
 const methodOverride = require("method-override");
 const mongoose = require("mongoose");
 const TeamRouter = require("./controllers/team")
-
+const Team = require('./models/team')
 
 const { DATABASE_URL, SECRET, PORT } = process.env;
 
@@ -55,6 +55,12 @@ app.get("/nfl", (req, res)=>{
 
 
 //show- get
+
+app.get("/nfl/:id", (req, res) => {
+  const id = req.params.id;
+  const team = Team[id];
+  res.render("show.ejs", { team, id });
+});
 
 
 
