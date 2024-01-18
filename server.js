@@ -27,9 +27,9 @@ app.use('/nfl', TeamRouter)
 
 
 //index
-// app.get("/nfl", (req, res)=>{
-//   res.render("index.ejs")
-// })
+app.get("/nfl", (req, res)=>{
+   res.render("index.ejs")
+})
 
 //new-get
 

@@ -1,10 +1,10 @@
-const nflTeams = [
+const nfl = [
     {
       team: "Arizona Cardinals",
       superBowlChamps: false,
       location: "Glendale, Arizona",
       yearsAsFranchise: 103,
-      image: "https://imgur.com/LTnZZJd" // Replace with a valid image URL
+      image: "https://imgur.com/LTnZZJd.png" // Replace with a valid image URL
     },
     {
       team: "Atlanta Falcons",
@@ -15,4 +15,4 @@ const nflTeams = [
     },
    
   ];
-module.exports = nflTeams   
+module.exports = nfl

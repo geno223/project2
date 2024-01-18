@@ -1,1 +1,19 @@
-<h1>NFL Teams</h1>
+<body>
+
+    <h1>teams</h1>
+      
+    <% for(let i =0; i < teams.length; i++) {%>
+    <a href="/teams/<%= teams[i]._id%>">
+        <h2><%= teams[i].location %></h2></a>
+        
+    <div class="name-this">
+        <a href="/teams/<%= i %>" class="name-this"
+          ><img src="<%= teams[i].image %>" class="name-this"
+        />
+      </a>
+
+        <div class="name-this"><%= teams[i].id %></div>
+        <div class="name-this"><%= teams[i].name %></div>
+        <%}%>
+    
+    </body>

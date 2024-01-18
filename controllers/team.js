@@ -7,7 +7,7 @@ const router = express.Router()
 router.get("/", async (req, res) => {
     const teams= await Team.find({});
     console.log(teams)
-    res.render("index.ejs", { teams});
+    res.render("index.ejs", {teams});
   });
   
   module.exports = router
