@@ -4,32 +4,33 @@
    
   }
   h1{
-    color: brown;
+    color: orange;
   }
   h2{
-    color: brown;
+    color: orange;
   }
   h3{
-    color: brown;
+    color: orange;
   }
   
+  </style>
   </style>
 <body>
 
     <h1>Teams</h1>
-      
+    <a href="/nfl/<%= teams._id%>/new"><button>Add Team</button></a>
+
     <% for(let i =0; i < teams.length; i++) {%>
     <a href="/nfl/<%= teams[i]._id%>">
         <h2><%= teams[i].location %></h2></a>
         <h3><%= teams[i].team %></h3></a>
-        <a href="/nfl/<%= teams._id%>/new"><button>Add Team</button></a>
     <div class="name-this">
         <a href="/nfl/<%= i %>" class="name-this"
           ><img src="<%= teams[i].image %>" class="name-this"
         />
       </a>
 
-        <div class="name-this"><%= teams[i].id %></div>
+        <!-- <div class="name-this"><%= teams[i].id %></div> -->
         <div class="name-this"><%= teams[i].name %></div>
         <%}%>
     

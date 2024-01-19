@@ -4,19 +4,18 @@
    
   }
   h1{
-    color: brown;
+    color: orange;
   }
   h2{
-    color: brown;
+    color: orange;
   }
   h3{
-    color: brown;
+    color: orange;
   }
   
   </style>
 <body>
-
-    <h1>Teams</h1>
+    <h1><%= teams.team %></h1></a>
 
     <a href="/nfl/<%= teams._id%>/edit"><button>Edit</button></a>
     <a href="/nfl/"><button>Back</button></a>
@@ -24,17 +23,21 @@
     <form action="/nfl/<%=teams._id%>?_method=DELETE" method="post">
         <button>Delete</button>
     </form>
-
-    <a href="/nfl/<%= teams._id%>">
-        <h2><%= teams.location %></h2></a>
-        <h3><%= teams.team %></h3></a>
-       
     <div class="name-this">
         <img src="<%= teams.image %>" class="name-this"
         />
       </a>
 
-        <div class="name-this"><%= teams.id %></div>
+    <a href="/nfl/<%= teams._id%>">
+       
+        
+        <h2><%= teams.location %></h2></a>
+       <h3>Franchise Age : <%= teams.yearsAsFranchise %></h3></a>
+       
+
+    
+
+        <!-- <div class="name-this"><%= teams.id %></div> -->
         <div class="name-this"><%= teams.name %></div>
   
     
