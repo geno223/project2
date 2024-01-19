@@ -26,41 +26,7 @@ app.use('/static', express.static('public'))
 app.use('/nfl', TeamRouter)
 
 
-//index
-app.get("/nfl", (req, res)=>{
-   res.render("index.ejs")
-})
 
-//new-get
-
-
-
-//destroy-delete
-
-
-
-//update-put
-
-
-
-
-//create-post
-
-
-
-
-//edit-get
-
-
-
-
-//show- get
-
-app.get("/nfl/:id", (req, res) => {
-  const id = req.params.id;
-  const team = Team[id];
-  res.render("show.ejs", { team, id });
-});
 
 
 
