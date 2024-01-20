@@ -8,22 +8,25 @@
   }
   h2{
     color: orange;
+  
   }
   h3{
     color: orange;
+    font-size: 50
   }
   
   </style>
   </style>
 <body>
 
-    <h1>Teams</h1>
+    <h1>NFL Playoffs</h1>
     <a href="/nfl/<%= teams._id%>/new"><button>Add Team</button></a>
 
     <% for(let i =0; i < teams.length; i++) {%>
     <a href="/nfl/<%= teams[i]._id%>">
-        <h2><%= teams[i].location %></h2></a>
-        <h3><%= teams[i].team %></h3></a>
+      <h3><%= teams[i].team %></h3></a>
+      <h2><%= teams[i].location %></h2></a>
+       
     <div class="name-this">
         <a href="/nfl/<%= i %>" class="name-this"
           ><img src="<%= teams[i].image %>" class="name-this"
