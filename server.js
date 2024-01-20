@@ -22,6 +22,9 @@ app.use(express.urlencoded({extended: true}))
 app.use('/static', express.static('public'))
 
 // routes
+app.get("/", (req, res)=>{
+  res.redirect("/nfl")
+})
 
 app.use('/nfl', TeamRouter)
 
