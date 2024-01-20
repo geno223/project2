@@ -3,7 +3,7 @@
 - **Eugenio Jimenez:**
 - **NFL Team Tracker:**
 - **Description:**
-Bring users to a page where the can click through the teams of either the afc or nfc division of the nfl .they will be brought to a show page displaying an image of the team logo , the 2024 season record, and city /state of where that team plays.
+Bring users to a page where the can click through the nfl playoff teams currentlty in the nfl .they will be brought to a show page displaying an image of the team logo , a stat saying how long theyve been a franchise  and city /state of where that team plays.
 - **Github URL:https://github.com/geno223/project2**
 - **Deployed Website:https://ej-seal-project2.onrender.com/**
 - **Trello Board:https://trello.com/b/M5qKPqVY/nfl**
